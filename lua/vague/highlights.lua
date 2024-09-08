@@ -360,6 +360,19 @@ hl.plugins.notify = {
   NotifyTRACETitle = { fg = c.number },
 }
 
+hl.plugins.notify = {
+  NavicIconsClass = { fg = c.func },
+  NavicIconsFunction = { fg = c.keyword },
+  NavicIconsVariable = { fg = c.string },
+  NavicIconsConstant = { fg = c.string },
+  NavicIconsBoolean = { fg = c.string },
+  NavicIconsString = { fg = c.type },
+  NavicIconsObject = { fg = c.func },
+  NavicIconsProperty = { fg = c.fg },
+  NavicText = { fg = c.fg },
+  NavicSeparator = { fg = c.fg },
+}
+
 hl.plugins.neotest = {
   NeotestTest = { fg = c.fg },
   NeotestUnknown = { fg = c.fg },
