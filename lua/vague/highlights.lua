@@ -2,6 +2,64 @@ local c = require("vague.colors")
 local config = require("vague.config").current
 local M = {}
 local hl = { plugins = {} }
+local kinds = {
+  Array = "@punctuation.bracket",
+  Boolean = "@boolean",
+  Class = "@type",
+  Color = "Special",
+  Constant = "@constant",
+  Constructor = "@constructor",
+  Enum = "@lsp.type.enum",
+  EnumMember = "@lsp.type.enumMember",
+  Event = "Special",
+  Field = "@variable.member",
+  File = "Normal",
+  Folder = "Directory",
+  Function = "@function",
+  Interface = "@lsp.type.interface",
+  Key = "@variable.member",
+  Keyword = "@lsp.type.keyword",
+  Method = "@function.method",
+  Module = "@module",
+  Namespace = "@module",
+  Null = "@constant.builtin",
+  Number = "@number",
+  Object = "@constant",
+  Operator = "@operator",
+  Package = "@module",
+  Property = "@property",
+  Reference = "@markup.link",
+  Snippet = "Conceal",
+  String = "@string",
+  Struct = "@lsp.type.struct",
+  Unit = "@lsp.type.struct",
+  Text = "@markup",
+  TypeParameter = "@lsp.type.typeParameter",
+  Variable = "@variable",
+  Value = "@string",
+}
+
+function M.kinds(hl, pattern)
+  hl = hl or {}
+  for kind, link in pairs(kinds) do
+    local base = "LspKind" .. kind
+    if pattern then
+      hl[pattern:format(kind)] = base
+    else
+      hl[base] = link
+    end
+  end
+  return hl
+end
+
+function M.get(c, opts)
+  local ret = {
+    NavicSeparator = { fg = c.fg, bg = c.none },
+    NavicText = { fg = c.fg, bg = c.none },
+  }
+  M.kinds(ret, "NavicIcons%s")
+  return ret
+end
 
 ---@param highlights table <string, table>
 local function set_vim_highlights(highlights)
@@ -360,18 +418,7 @@ hl.plugins.notify = {
   NotifyTRACETitle = { fg = c.number },
 }
 
-hl.plugins.navic = {
-  NavicIconsClass = { fg = c.func },
-  NavicIconsFunction = { fg = c.func },
-  NavicIconsVariable = { fg = c.string },
-  NavicIconsConstant = { fg = c.string },
-  NavicIconsBoolean = { fg = c.parameter },
-  NavicIconsString = { fg = c.type },
-  NavicIconsObject = { fg = c.func },
-  NavicIconsProperty = { fg = c.property },
-  NavicText = { fg = c.fg },
-  NavicSeparator = { fg = c.fg },
-}
+hl.plugins.navic = M.get
 
 hl.plugins.neotest = {
   NeotestTest = { fg = c.fg },
