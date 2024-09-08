@@ -363,8 +363,8 @@ hl.plugins.notify = {
 hl.plugins.navic = {
   NavicIconsClass = { fg = c.func },
   NavicIconsFunction = { fg = c.func },
-  NavicIconsVariable = { fg = c.constant },
-  NavicIconsConstant = { fg = c.constant },
+  NavicIconsVariable = { fg = c.string },
+  NavicIconsConstant = { fg = c.string },
   NavicIconsBoolean = { fg = c.parameter },
   NavicIconsString = { fg = c.type },
   NavicIconsObject = { fg = c.func },
