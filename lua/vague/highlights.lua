@@ -343,17 +343,17 @@ hl.plugins.notify = {
   NotifyERRORIcon = { fg = c.error },
   NotifyERRORTitle = { fg = c.error },
 
-  NotifyWARNBorder = { fg = c.delta },
-  NotifyWARNIcon = { fg = c.delta },
-  NotifyWARNTitle = { fg = c.delta },
+  NotifyWARNBorder = { fg = c.warning },
+  NotifyWARNIcon = { fg = c.warning },
+  NotifyWARNTitle = { fg = c.warning },
 
   NotifyDEBUGBorder = { fg = c.builtin },
   NotifyDEBUGIcon = { fg = c.builtin },
   NotifyDEBUGTitle = { fg = c.builtin },
 
-  NotifyINFOBorder = { fg = c.hint },
-  NotifyINFOIcon = { fg = c.hint },
-  NotifyINFOTitle = { fg = c.hint },
+  NotifyINFOBorder = { fg = c.keyword },
+  NotifyINFOIcon = { fg = c.keyword },
+  NotifyINFOTitle = { fg = c.keyword },
 
   NotifyTRACEBorder = { fg = c.number },
   NotifyTRACEIcon = { fg = c.number },
@@ -362,14 +362,14 @@ hl.plugins.notify = {
 
 hl.plugins.navic = {
   NavicIconsClass = { fg = c.func },
-  NavicIconsFunction = { fg = c.keyword },
-  NavicIconsVariable = { fg = c.string },
-  NavicIconsConstant = { fg = c.string },
-  NavicIconsBoolean = { fg = c.string },
+  NavicIconsFunction = { fg = c.func },
+  NavicIconsVariable = { fg = c.constant },
+  NavicIconsConstant = { fg = c.constant },
+  NavicIconsBoolean = { fg = c.parameter },
   NavicIconsString = { fg = c.type },
   NavicIconsObject = { fg = c.func },
-  NavicIconsProperty = { fg = c.fg },
-  NavicText = { fg = c.fg },
+  NavicIconsProperty = { fg = c.property },
+  NavicText = { fg = c.string },
   NavicSeparator = { fg = c.fg },
 }
 
