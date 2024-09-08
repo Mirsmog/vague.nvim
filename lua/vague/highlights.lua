@@ -347,13 +347,13 @@ hl.plugins.notify = {
   NotifyWARNIcon = { fg = c.delta },
   NotifyWARNTitle = { fg = c.delta },
 
-  NotifyINFOBorder = { fg = c.builtin },
-  NotifyINFOIcon = { fg = c.builtin },
-  NotifyINFOTitle = { fg = c.builtin },
+  NotifyDEBUGBorder = { fg = c.builtin },
+  NotifyDEBUGIcon = { fg = c.builtin },
+  NotifyDEBUGTitle = { fg = c.builtin },
 
-  NotifyDEBUGBorder = { fg = c.hint },
-  NotifyDEBUGIcon = { fg = c.hint },
-  NotifyDEBUGTitle = { fg = c.hint },
+  NotifyINFOBorder = { fg = c.hint },
+  NotifyINFOIcon = { fg = c.hint },
+  NotifyINFOTitle = { fg = c.hint },
 
   NotifyTRACEBorder = { fg = c.number },
   NotifyTRACEIcon = { fg = c.number },
