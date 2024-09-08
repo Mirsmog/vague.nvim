@@ -360,7 +360,7 @@ hl.plugins.notify = {
   NotifyTRACETitle = { fg = c.number },
 }
 
-hl.plugins.notify = {
+hl.plugins.navic = {
   NavicIconsClass = { fg = c.func },
   NavicIconsFunction = { fg = c.keyword },
   NavicIconsVariable = { fg = c.string },
