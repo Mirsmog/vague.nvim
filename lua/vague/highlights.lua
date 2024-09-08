@@ -369,7 +369,7 @@ hl.plugins.navic = {
   NavicIconsString = { fg = c.type },
   NavicIconsObject = { fg = c.func },
   NavicIconsProperty = { fg = c.property },
-  NavicText = { fg = c.string },
+  NavicText = { fg = c.fg },
   NavicSeparator = { fg = c.fg },
 }
 
