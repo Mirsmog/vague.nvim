@@ -89,7 +89,8 @@ hl.common = {
   Whitespace = { fg = c.comment },
   WildMenu = { fg = c.bg, bg = c.func },
   WinSeparator = { fg = c.border },
-  WinBar = { bg = c.none },
+  WinBar = { bg = "NONE" },
+  WinBarNC = { bg = "NONE" },
 }
 
 hl.syntax = {
