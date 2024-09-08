@@ -338,6 +338,28 @@ hl.plugins.dashboard = {
   DashboardFooter = { fg = c.parameter, gui = "italic" },
 }
 
+hl.plugins.notify = {
+  NotifyERRORBorder = { fg = c.error },
+  NotifyERRORIcon = { fg = c.error },
+  NotifyERRORTitle = { fg = c.error },
+
+  NotifyWARNBorder = { fg = c.delta },
+  NotifyWARNIcon = { fg = c.delta },
+  NotifyWARNTitle = { fg = c.delta },
+
+  NotifyINFOBorder = { fg = c.builtin },
+  NotifyINFOIcon = { fg = c.builtin },
+  NotifyINFOTitle = { fg = c.builtin },
+
+  NotifyDEBUGBorder = { fg = c.hint },
+  NotifyDEBUGIcon = { fg = c.hint },
+  NotifyDEBUGTitle = { fg = c.hint },
+
+  NotifyTRACEBorder = { fg = c.number },
+  NotifyTRACEIcon = { fg = c.number },
+  NotifyTRACETitle = { fg = c.number },
+}
+
 hl.plugins.neotest = {
   NeotestTest = { fg = c.fg },
   NeotestUnknown = { fg = c.fg },
